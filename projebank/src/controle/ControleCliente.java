@@ -23,7 +23,7 @@ public class ControleCliente {
 
 	@Autowired
 	ClienteDAO clieDAO;
-//sdffxcddfgfgdfg
+
 
 	@RequestMapping(value = "novo", method = RequestMethod.GET)
 	private ModelAndView home(Cliente cliente, Model model) {
