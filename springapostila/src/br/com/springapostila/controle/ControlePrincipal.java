@@ -8,6 +8,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ControlePrincipal {
 
+	
+	//teste para o Egit
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView  iniciar(){
 		
