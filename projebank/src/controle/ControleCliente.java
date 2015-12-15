@@ -25,6 +25,8 @@ public class ControleCliente {
 	ClienteDAO clieDAO;
 
 
+	//teste no egit
+	
 	@RequestMapping(value = "novo", method = RequestMethod.GET)
 	private ModelAndView home(Cliente cliente, Model model) {
 
