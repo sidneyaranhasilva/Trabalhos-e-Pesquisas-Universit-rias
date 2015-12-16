@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -68,7 +69,7 @@
 								<td>${conta.id}</td>
 								<td>${conta.agencia}</td>
 								<td>${conta.codConta}</td>
-								<td>${conta.saldo}</td>
+								<td> <fmt:formatNumber type="currency" value="${conta.saldo}" />   </td>
 
 
 
@@ -93,8 +94,7 @@
 
 
 
-	<a href="${pageContext.request.contextPath}">Voltar para a página
-		principal</a>
+	
 	</td>
 
 

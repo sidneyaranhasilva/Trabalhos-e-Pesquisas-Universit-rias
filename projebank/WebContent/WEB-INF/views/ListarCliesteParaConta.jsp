@@ -84,7 +84,7 @@
 	</fieldset>
 
 
-<a href="${pageContext.request.contextPath}">Voltar para a página principal</a></td>
+<a href="inicio">Voltar para a página principal</a></td>
 
 
 	

@@ -126,9 +126,12 @@ iframe {
 	</nav>
 	
 	
-  
+  <div class="corpo">
 		<iframe name="quadro"> </iframe>
 
+
+
+	</div>
 
 
 

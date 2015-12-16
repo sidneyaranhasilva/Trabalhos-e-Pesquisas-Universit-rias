@@ -89,7 +89,7 @@
 			</table>
 	</fieldset>
 
-<a href="${pageContext.request.contextPath}">Voltar para a página principal</a></td>
+
 
 
 	<script type="text/javascript">

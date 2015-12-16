@@ -34,15 +34,10 @@ public class ProdutoController {
 	}
 
 	@RequestMapping(value = "listarProduto")
-	public ModelAndView listarProduto(Produto produto, HttpSession session) {
+	public ModelAndView listarProduto() {
 		
 
-		List<Produto> produtos = new ArrayList<Produto>();
-
-		produtos = dao.listar();
-		System.out.println("passei por este metodo");
-
-		session.setAttribute("ListaProdutos", produtos);
+		
 		return new ModelAndView("listar/ListarProduto");
 
 	}
