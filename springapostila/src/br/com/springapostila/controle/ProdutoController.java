@@ -3,9 +3,6 @@ package br.com.springapostila.controle;
 import java.util.ArrayList;
 import java.util.List;
 
-	
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,45 +19,41 @@ public class ProdutoController {
 
 	@Autowired
 	ProdutoDAO dao;
-	
-	
+
 	@RequestMapping(value = "produto", method = RequestMethod.GET)
-	public ModelAndView  produto(){
-		
+	public ModelAndView produto() {
+
 		System.out.println("Passei pelo metodo hello do controller pessoa");
-		
+
 		return new ModelAndView("listar/NovoProduto");
-		
+
 	}
 
 	@RequestMapping(value = "listarProduto")
-	public ModelAndView listarProduto() {
-		
+	public ModelAndView listarProduto(HttpSession session) {
 
-		
-		return new ModelAndView("listar/ListarProduto");
+		List<Produto> produtos = new ArrayList<Produto>();
+
+		produtos = dao.listar();
+
+	
+
+		return new ModelAndView("listar/ListarProduto", "ListaProdutos", produtos );
 
 	}
-	
+
 	@RequestMapping(value = "salvarProduto", method = RequestMethod.POST)
 	public ModelAndView salvarProduto(Produto produto) {
-		
-
-		
 
 		dao.gravar(produto);
 
-		
-
-		
 		System.out.println("PASSEI POR SALVAR PRODUTO");
 		System.out.println("Produto: " + produto.getNome());
-		
+
 		String mensagem = "Produto Cadastrado com sucesso.";
 
 		return new ModelAndView("listar/NovoProduto", "mensagem", mensagem);
 
 	}
-	
-	
+
 }
