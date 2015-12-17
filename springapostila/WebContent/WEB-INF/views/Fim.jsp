@@ -8,7 +8,7 @@
 
 <!-- <link rel="stylesheet" type="text/css"  href="estilo.css" /> -->
 
-<!-- quero fazer um teste no git aqui -->
+
 <style>
 titulo {
 	display: block;
