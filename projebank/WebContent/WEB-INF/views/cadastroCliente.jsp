@@ -8,8 +8,8 @@
 <title>Cadastro Cliente</title>
 </head>
 <body>
-
-	<h1>Cadastro Cliente</h1>
+<!-- teste de cadastro de cliente -->
+	<h1>Cadastro Cliente</h1>  
 	<br />
 	<form method="post" action='<c:url value="/inicio/salvar"/>'>
 
