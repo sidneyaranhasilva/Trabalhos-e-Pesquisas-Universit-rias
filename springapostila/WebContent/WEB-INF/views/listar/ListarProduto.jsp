@@ -1,5 +1,4 @@
 <%@page import="br.com.springapostila.modelo.ProdutoDAO"%>
-
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,13 +10,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style type="text/css" media="all">
-@import url("css/maven-base.css");
-
-@import url("css/maven-theme.css");
-
-@import url("css/site.css");
-
-@import url("/css/screen.css");
+	@import url("css/maven-base.css");
+	@import url("css/maven-theme.css");
+	@import url("css/site.css");
+	@import url("/css/screen.css");
 </style>
 </head>
 <body>
