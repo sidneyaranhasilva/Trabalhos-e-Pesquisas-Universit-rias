@@ -9,11 +9,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<style type="text/css" media="all">
-	@import url("css/maven-base.css");
-	@import url("css/maven-theme.css");
-	@import url("css/site.css");
-	@import url("/css/screen.css");
+<style type="text/css">
+
+
+
+<%@include file="/WEB-INF/views/css/displaytag.css" %>     
+<%@include file="/WEB-INF/views/css/alternative.css" %>     
+<%@include file="/WEB-INF/views/css/maven-base.css" %>     
+</style>	
+
+
+
+
 </style>
 </head>
 <body>
