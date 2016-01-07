@@ -108,8 +108,8 @@ iframe {
 		<li><a href="#">Administração</a>
 
 			<ul>
-				<li><a href="produto" target="quadro">Manter Produtos</a></li>
-				<li><a href="listarProduto" target="quadro">Cadstro de Grupos</a></li>
+				<li><a href="${pageContext.request.contextPath}/produto" target="quadro">Manter Produtos</a></li>
+				<li><a href="${pageContext.request.contextPath}/listarProduto" target="quadro">Cadstro de Grupos</a></li>
 				<li><a href="#">Cadastro de acessos</a></li>
 				<li><a href="#">Trocar senha</a></li>
 
@@ -126,7 +126,7 @@ iframe {
 				<li><a href="#">Design</a></li>
 			</ul></li>
 		<li><a href="#">Sobre</a></li>
-		<li><a href="sair">Sair</a></li>
+		<li><a href="${pageContext.request.contextPath}/sair">Sair</a></li>
 		<li class="extend"></li>
 	</ul>
 
