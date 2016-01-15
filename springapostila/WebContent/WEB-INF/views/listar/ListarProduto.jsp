@@ -1,7 +1,5 @@
-<%@page import="br.com.springapostila.modelo.ProdutoDAO"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://displaytag.sf.net" prefix="display"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,19 +7,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
+<c:set var="ctxPath" value="${pageContext.request.contextPath}" scope="page"/>
+<link href="resources/css/displaytag.css" rel="stylesheet" type="text/css" charset="UTF-8"/>
+<link href="resources/css/alternative.css" rel="stylesheet" type="text/css" charset="UTF-8"/>
+<link href="resources/css/maven-base.css" rel="stylesheet" type="text/css" charset="UTF-8"/>   	
 
-
-
-<%@include file="/WEB-INF/views/css/displaytag.css" %>     
-<%@include file="/WEB-INF/views/css/alternative.css" %>     
-<%@include file="/WEB-INF/views/css/maven-base.css" %>     
-</style>	
-
-
-
-
-</style>
 </head>
 <body>
 
