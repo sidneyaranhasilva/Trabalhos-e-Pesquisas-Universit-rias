@@ -1,6 +1,6 @@
 package controle;
 
-import java.beans.MethodDescriptor;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class StartAplication {
 
 	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException,
-			NoSuchMethodException, SecurityException, InvocationTargetException {
+			NoSuchMethodException, SecurityException, InvocationTargetException, InstantiationException {
 
 		Scanner scanner;
 		Class objClass = null;
@@ -81,18 +81,38 @@ public class StartAplication {
 			//Class retorno = metodo.getReturnType();
 
 			
-			String tipo  = field.getType().toString();
+			System.out.println("Digite valor para o : " + field.getName());
 			
+			Object valor = scanner.nextLine();
+			
+			/*
+			 * Procuro no tipo especificado um construtor que recebe uma String
+			 */
+			Constructor<?> cons =  
+			        (Constructor<?>) field.getType().getConstructor(new Class<?>[]{String.class});  
+
+			       /*
+			        * Instancio a classe do tipo da classe, passando o valor lido. 
+			        * 
+			        * igual a Integer teste = new Integer("2") para o caso de Integer
+			        */
+			      Object valorDoTipo = (Object) cons.newInstance(new Object[]{valor});  
+
+			metodo.invoke(objeto, valorDoTipo);
+			
+			/*
 			if(field.getType().toString().equals("class java.lang.String")){
 			scanner = new Scanner(System.in);
 			System.out.println("Digite valor para o : " + field.getName());
 			String valor = scanner.nextLine();
 			metodo.invoke(objeto, valor);
-			}else if(field.getType().toString().equals("int")){
+			}else if(field.getType().toString().equals("Integer")){
 				System.out.println("Digite valor para o : " + field.getName());
-				int valor = scanner.nextInt();
-				metodo.invoke(objeto, valor);
+				
+				Object valor = scanner.nextLine();
+				metodo.invoke(objeto, field.getType().cast(valor));
 			}
+			*/
 		}
 		
 		System.out.println( objeto.toString());

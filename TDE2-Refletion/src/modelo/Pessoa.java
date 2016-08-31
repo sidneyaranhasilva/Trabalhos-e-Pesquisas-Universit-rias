@@ -4,7 +4,7 @@ public class Pessoa {
 
 	private String cpf;
 	private String nome;
-	private int idade;
+	private Integer idade;
 
 	public Pessoa(String cpf, String nome, int idade) {
 		super();
@@ -33,11 +33,11 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public int getIdade() {
+	public Integer getIdade() {
 		return idade;
 	}
 
-	public void setIdade(int idade) {
+	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
 

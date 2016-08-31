@@ -1,7 +1,7 @@
 package modelo;
 
 public class Departamento {
-	private int codigo;
+	private Integer codigo;
 	private String nome;
 
 	public Departamento(int codigo, String nome) {
